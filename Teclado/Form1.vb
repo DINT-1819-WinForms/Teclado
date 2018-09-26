@@ -41,4 +41,26 @@
         Loop While (TableLayoutPanel1.GetControlFromPosition(columna, fila) IsNot Nothing) Or (fila = 3 And (columna = 0 Or columna = 2))
 
     End Sub
+
+    Private Sub DeshabilitarCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles DeshabilitarCheckBox.CheckedChanged
+
+        'En función del estado del CheckBox, llamamos al método que cambia el estado de los botones indicando el nuevo estado
+        If DeshabilitarCheckBox.Checked Then
+            CambiarEstadoBotones(False)
+        Else
+            CambiarEstadoBotones(True)
+        End If
+    End Sub
+    ''' <summary>
+    ''' Cambia el estado de todos los botones incluidos en el panel
+    ''' </summary>
+    ''' <param name="estado">Valor que debe darse a la propiedad Enabled de los botones</param>
+    Private Sub CambiarEstadoBotones(estado As Boolean)
+
+        'Para cada control de tipo Button incluido en el panel, actualizamos el estado
+        For Each boton As Button In TableLayoutPanel1.Controls.OfType(Of Button)
+            boton.Enabled = estado
+        Next
+
+    End Sub
 End Class

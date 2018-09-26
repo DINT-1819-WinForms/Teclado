@@ -25,6 +25,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.NumeroTextBox = New System.Windows.Forms.TextBox()
+        Me.DeshabilitarCheckBox = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -35,7 +36,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 84)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
@@ -48,20 +49,31 @@ Partial Class Form1
         'NumeroTextBox
         '
         Me.NumeroTextBox.Location = New System.Drawing.Point(129, 32)
-        Me.NumeroTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NumeroTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.NumeroTextBox.Name = "NumeroTextBox"
         Me.NumeroTextBox.Size = New System.Drawing.Size(173, 22)
         Me.NumeroTextBox.TabIndex = 0
+        '
+        'DeshabilitarCheckBox
+        '
+        Me.DeshabilitarCheckBox.AutoSize = True
+        Me.DeshabilitarCheckBox.Location = New System.Drawing.Point(16, 352)
+        Me.DeshabilitarCheckBox.Name = "DeshabilitarCheckBox"
+        Me.DeshabilitarCheckBox.Size = New System.Drawing.Size(160, 21)
+        Me.DeshabilitarCheckBox.TabIndex = 1
+        Me.DeshabilitarCheckBox.Text = "Deshabilitar botones"
+        Me.DeshabilitarCheckBox.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 361)
+        Me.ClientSize = New System.Drawing.Size(433, 385)
+        Me.Controls.Add(Me.DeshabilitarCheckBox)
         Me.Controls.Add(Me.NumeroTextBox)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Teclado"
         Me.ResumeLayout(False)
@@ -71,4 +83,5 @@ Partial Class Form1
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents NumeroTextBox As TextBox
+    Friend WithEvents DeshabilitarCheckBox As CheckBox
 End Class
